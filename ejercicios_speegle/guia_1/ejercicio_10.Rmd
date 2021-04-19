@@ -1,0 +1,34 @@
+---
+title: "Ejercicio 1.10 guía speegle"
+output: html_notebook
+---
+
+---
+
+### Enunciado
+Consider the mtcars data set.
+
+* Which cars have 4 forward gears?
+```{r}
+mtcars[mtcars$gear==4,0]
+```
+
+* What subset of mtcars does `mtcars[mtcars$disp > 150 & mtcars$mpg > 20,]` describe?
+```{r}
+mtcars[mtcars$disp > 150 & mtcars$mpg > 20,]
+```
+
+* Which cars have 4 forward gears and manual transmission? (Note: manual transmission is 1 and automatic is 0.)
+```{r}
+mtcars[mtcars$gear==4 & mtcars$am==1,0]
+```
+
+* Which cars have 4 forward gears or manual transmission?
+```{r}
+mtcars[mtcars$gear==4 | mtcars$am==1,0]
+```
+
+* Find the mean mpg of the cars with 2 carburetors.
+```{r}
+mean(mtcars[mtcars$carb==2,"mpg"])
+```
