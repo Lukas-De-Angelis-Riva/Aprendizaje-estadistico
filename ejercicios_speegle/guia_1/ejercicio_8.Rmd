@@ -1,0 +1,35 @@
+---
+title: "Ejercicio 1.8 guía speegle"
+output: html_notebook
+---
+
+---
+
+### Enunciado
+Consider the built-in data frame airquality.
+
+* How many observations of how many variables are there?
+* What are the names of the variables?
+* What type of data is each variable?
+
+Graphic option:
+```{r}
+str(airquality)
+```
+
+Getting the numbers separately:
+```{r}
+nobs <- nrow(airquality)
+nvar <- ncol(airquality)
+names <- variable.names(airquality)
+vtypes <- sapply(airquality, typeof)
+
+nobs
+nvar
+names
+vtypes
+```
+
+* Do you agree with the data type that has been given to each variable? What would have been some alternative choices?
+
+The data type factor for the variable month instead of integer would be useful for a better handling of the information and to make the code more readable.
