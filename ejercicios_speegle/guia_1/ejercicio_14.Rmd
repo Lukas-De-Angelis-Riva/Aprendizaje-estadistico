@@ -1,0 +1,39 @@
+---
+title: "Ejercicio 1.14 guía speegle"
+output: html_notebook
+---
+
+---
+
+### Enunciado
+
+This problem uses the package Lahman which you will probably need to install. Consider the data set Batting, which should now be available. It contains batting statistics of all major league players broken down by season since 1871. We will be using this data set some more in the data wrangling chapter of this book.
+
+```{r}
+bat <- Lahman::Batting
+```
+
+* How many observations of how many variables are there?
+```{r}
+nrow(bat)
+```
+* Use the command head(Batting) to get a look at the first six lines of data.
+```{r}
+head(bat)
+```
+* What is the most number of triples (X3B) that have been hit in a single season?
+```{r}
+bat[which.max(bat$X3B),"X3B"]
+```
+
+* What is the playerID(s) of the person(s) who hit the most number of triples in a single season? In what year did it happen?
+```{r}
+bat[which.max(bat$X3B), "playerID"]
+```
+
+
+* Which player hit the most number of triples in a single season since 1960?
+```{r}
+batSince1960 <- bat[bat$yearID >= 1960, ]
+batSince1960[which.max(batSince1960$X3B), "playerID"]
+```
