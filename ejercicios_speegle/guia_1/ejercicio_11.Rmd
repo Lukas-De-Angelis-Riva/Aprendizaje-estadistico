@@ -1,0 +1,24 @@
+---
+title: "Ejercicio 1.11 guía speegle"
+output: html_notebook
+---
+
+---
+
+### Enunciado
+Consider the mtcars data set .    
+
+Convert the am variable to a factor with two levels, auto and manual, by typing the following:
+```{r}
+mtcars$am <- factor(mtcars$am, levels = c(0, 1), labels = c("auto", "manual"))
+```
+
+How many cars of each type of transmission are there?
+```{r}
+table(mtcars[,"am"])
+```
+
+How many cars of each type of transmission have gas mileage estimates greater than 25 mpg?
+```{r}
+table(mtcars[mtcars$mpg>25,][,"am"])
+```
