@@ -1,0 +1,34 @@
+---
+title: "Ejercicio 1.12 guía speegle"
+output: html_notebook
+---
+
+---
+
+### Enunciado
+This problem uses the data set hot_dogs from the package fosdata.
+```{r}
+hd <- fosdata::hot_dogs
+```
+
+* How many observations of how many variables are there? What types are the variables?
+```{r}
+nobs <- nrow(hd)
+nvar <- ncol(hd)
+vtypes <- sapply(hd, typeof)
+```
+
+* What are the three kinds of hot dogs in this data set?
+```{r}
+names(table(hd[1]))
+```
+
+* What is the highest sodium content of any hot dog in this data set?
+```{r}
+hd[which.max(hd$sodium),]
+```
+
+* What is the mean calorie content for Beef hot dogs?
+```{r}
+mean(hd[hd$type=="Beef",]$calories)
+```
