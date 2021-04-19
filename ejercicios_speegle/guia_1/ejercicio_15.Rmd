@@ -1,0 +1,49 @@
+---
+title: "Ejercicio 1.15 guía speegle"
+output: html_notebook
+---
+
+---
+
+### Enunciado
+Consider the bechdel data set in the fosdata package.
+```{r}
+?fosdata::bechdel
+bd <- fosdata::bechdel
+```
+
+
+* How many movies in the data set pass the Bechdel test?
+```{r}
+nrow(bd[bd$binary=="PASS",])
+```
+
+* What percentage of movies in the data set pass the Bechdel test?
+```{r}
+mean(bd$binary=="PASS")
+```
+
+* Create a table of number of movies in the data set by year.
+```{r}
+table(bd$year)
+```
+
+* Which year has the most movies in the data set?
+```{r}
+names(which.max(table(bd$year)))
+```
+
+* How many different values are there in the clean_test variable?
+```{r}
+names(table(bd$clean_test))
+```
+
+* Create a data frame that contains only those observations that pass the Bechdel test.
+```{r}
+bd[bd$binary=="PASS",]
+```
+
+* Create a data frame that contains all of the observations that do not have missing values in the domgross variable.
+```{r}
+bd[!is.na(bd$domgross),]
+```
