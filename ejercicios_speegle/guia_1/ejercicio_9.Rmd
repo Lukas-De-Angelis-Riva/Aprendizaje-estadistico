@@ -1,0 +1,23 @@
+---
+title: "Ejercicio 1.9 guía speegle"
+output: html_notebook
+---
+
+---
+
+### Enunciado
+There is a built in data set state, which is really seven separate variables with names such as state.name, state.region, and state.area.
+
+* What are the possible regions a state can be in? How many states are in each region?
+```{r}
+table(state.region)
+```
+
+* Which states have area less than 10000 square miles?
+```{r}
+state.name[state.area<10000]
+```
+* Which state’s geographic center is furthest south? (Hint: use which.min)
+```{r}
+state.name[which.min(state.center$y)]
+```
