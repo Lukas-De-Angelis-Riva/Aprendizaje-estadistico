@@ -1,0 +1,33 @@
+---
+title: "Ejercicio 1.13 guía speegle"
+output: html_notebook
+---
+
+---
+
+### Enunciado
+This problem uses the data set DrinksWages from the package HistData.
+```{r}
+dw <- HistData::DrinksWages
+```
+
+* How many observations of how many variables are there? What types are the variables?
+```{r}
+nobs <- nrow(dw)
+nvar <- ncol(dw)
+vtypes <- sapply(dw, class)
+```
+* The variable wage contains the average wage for each profession. Which profession has the lowest wage?
+```{r}
+dw[which.min(dw$wage),]
+```
+
+* The variable n contains the number of workers surveyed for each profession. Sum this to find the total number of workers surveyed.
+```{r}
+sum(dw$n)
+```
+
+* Compute the mean wage for all workers surveyed by multiplying wage * n for each profession, summing, and dividing by the total number of workers surveyed.
+```{r}
+sum(dw$wage*dw$n)/sum(dw$n)
+```
