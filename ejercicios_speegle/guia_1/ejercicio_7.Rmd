@@ -1,0 +1,51 @@
+---
+title: "Ejercicio 1.7 guía speegle"
+output: html_notebook
+---
+
+---
+
+### Enunciado
+
+R has a built-in vector rivers which contains the lengths of major North American rivers.
+
+* Use ?rivers to learn about the data set.
+* Find the mean and standard deviation of the rivers data using the base R functions mean and sd.
+* Make a histogram (hist) of the rivers data.
+* Get the five number summary (summary) of rivers data.
+* Find the longest and shortest lengths of rivers in the set.
+* Make a list of all (the lengths of the) rivers longer than 1000 miles.
+
+---
+
+Use ?rivers to learn about the data set.
+```{r}
+?rivers
+```
+
+Find the mean and standard deviation of the rivers data using the base R functions mean and sd.
+```{r}
+mean(rivers)
+sd(rivers)
+```
+
+Make a histogram (hist) of the rivers data.
+```{r}
+hist(rivers)
+```
+
+Get the five number summary (summary) of rivers data.
+```{r}
+summary(rivers)
+```
+
+Find the longest and shortest lengths of rivers in the set.
+```{r}
+min(rivers)
+max(rivers)
+```
+
+Make a list of all (the lengths of the) rivers longer than 1000 miles.
+```{r}
+rivers[rivers>1000]
+```
