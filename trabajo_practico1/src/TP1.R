@@ -2,7 +2,7 @@ library(corrplot)
 library(RColorBrewer)
 library(GGally)
 library(gridExtra)
-
+library(leaps)
 
 data_cemento <- read.table("cemento.txt", header=TRUE)
 #data_cemento <- data_cemento[data_cemento$x5<3,]
