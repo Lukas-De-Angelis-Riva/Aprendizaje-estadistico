@@ -9,8 +9,11 @@
 * ...
 
 
-### TODO actual
-* Para el preprocessing de rango de frecuencias hacer cv para encontrar number_divisions
+### TODO 
+* Para el preprocessing de rango de frecuencias hacer cv para encontrar number_divisions ✔
+* Análisis exploratorio
+* Hacer un utils.R (obtener indices, si pinta un mejor KFold)
+* Hacer un preprocesamientos.R (donde estén todos los preprocessings que vamos a hacer)
 
 
 ### Regresores posibles
