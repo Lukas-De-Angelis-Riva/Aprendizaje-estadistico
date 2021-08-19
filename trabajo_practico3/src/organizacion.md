@@ -1,7 +1,7 @@
 # Lluvia de ideas y organización
 
 ### Preprocessings
-* Por rango de frecuencias
+* Por rango de frecuencias ✔
 * Por eliminación automática de variables
 * Por método de Forward
 * Por Lasso
@@ -12,8 +12,7 @@
 ### TODO 
 * Para el preprocessing de rango de frecuencias hacer cv para encontrar number_divisions ✔
 * Análisis exploratorio
-* Hacer un utils.R (obtener indices, si pinta un mejor KFold)
-* Hacer un preprocesamientos.R (donde estén todos los preprocessings que vamos a hacer)
+* Hacer un utils.R (obtener indices, si pinta un mejor KFold) ✔
 
 
 ### Regresores posibles

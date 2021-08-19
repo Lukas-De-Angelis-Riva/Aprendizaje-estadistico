@@ -2,11 +2,17 @@
 # # Utils
 # Este archivo recompila las funciones útiles para todos los notebooks realizados en el trabajo práctico
 
-# ## GridSearch
+# ### Semilla
+
+setSeed <- function(){
+    set.seed(5)
+}
 
 # ### KFold
 
-# Devuelve una lista (de listas) con los indices (del 1 al nrow) agrupados en K grupos.
+# Devuelve una lista (de doubles) con los indices (del 1 al nrow) agrupados en K grupos.
+# No es necesario que nrow sea multiplo de k, en caso de que sobren indices se agruparan en los primeros grupos
+#  hasta que se terminen de agrupar todos.
 obtener_indices_kfold <- function(nrow, k){
     indices <- list()
     for(j in 1:k) indices[[j]] <- as.double(list())
@@ -33,7 +39,20 @@ progreso <- function(v, valores, digits=1){
     return(paste("El progreso es del", p, "%"))
 }
 
-#
+# ### Datos
+
+obtener_X <- function(){
+    return(read.csv("Vessel_X.txt", header = FALSE))
+}
+obtener_Y <- function(){
+    vasijas_Y <- read.csv("Vessel_Y.txt", header = FALSE)
+    return(c(vasijas_Y$V1))
+}
+# Es necesario haber establecido una semilla antes de llamar a esta funcion,
+#  pues sino dara diferentes resultados cada llamado.
+obtener_holdout_ind <- function(X){
+    return(sample(seq_len(nrow(X)), size = 20))
+}
 
 
 
