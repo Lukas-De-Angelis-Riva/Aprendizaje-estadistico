@@ -2,7 +2,6 @@
 
 ### Preprocessings
 * Por rango de frecuencias ✔
-* Por eliminación automática de variables
 * Por método de Forward
 * Por Lasso
 * Por PCA
