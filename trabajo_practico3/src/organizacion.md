@@ -1,11 +1,32 @@
 # Lluvia de ideas y organización
 
 ### Preprocessings
-* Por rango de frecuencias ✔
+* Por rango de frecuencias
+    * LM ✔
+    * ADD ~ `[ Lukas ]`
+    * KNNR ~ `[ Ambos ]`
+    * No param X `[ ~Ambos ]`
+
 * Por método de Forward
-* Por Lasso
-* Por PCA
-* ...
+    * LM ~ `[ Lukas ]`
+
+* Por Lasso `[ Mateo ]`
+    * LM X
+    * ADD X
+    * KNNR X
+    * No param X
+
+* Por PCA `[Ambos]`
+    * LM X
+    * ADD X
+    * KNNR X
+    * No param X
+
+* El data set crudo `[ Mateo ]`
+    * LM X
+    * ADD X
+    * KNNR X
+    * No param X
 
 
 ### TODO 
