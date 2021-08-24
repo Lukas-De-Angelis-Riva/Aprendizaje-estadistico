@@ -23,10 +23,10 @@
     * No param X
 
 * El data set crudo `[ Mateo ]`
-    * LM X
-    * ADD X
-    * KNNR X
-    * No param X
+    * LM ~
+    * ADD ~
+    * KNNR ~
+    * No param ~
 
 
 ### TODO 
