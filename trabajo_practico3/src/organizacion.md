@@ -33,6 +33,7 @@
 * Para el preprocessing de rango de frecuencias hacer cv para encontrar number_divisions ✔
 * Análisis exploratorio
 * Hacer un utils.R (obtener indices, si pinta un mejor KFold) ✔
+* Intervalos de confianza para los mejores modelos (si no el mejor modelo)
 
 
 ### Regresores posibles
