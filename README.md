@@ -10,3 +10,8 @@
 ### Trabajo práctico 2: análisis discriminante
 
 [Informe](https://www.overleaf.com/read/zgptqfbpnmgn)
+
+---
+
+### Trabajo práctico 3: trabajo final
+[Informe](https://www.overleaf.com/read/nbrpxtwzsxdb)
