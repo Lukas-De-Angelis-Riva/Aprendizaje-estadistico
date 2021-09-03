@@ -1,0 +1,34 @@
+\textbf{Estimación de los coeficientes y test nulo}
+
+Calculamos el estimador de mínimos cuadrados para los coeficientes, expresándolos en 2 decimales significativos. Para cada uno de estos testeamos la hipótesis de que son nulos, obteniendo para cada coeficiente su correspondiente p-valor. Vale mencionar que para el parámetro $\beta_0$, el intercept, no calculamos su p-valor, dado que suponemos que este existe siempre.
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Coeficiente & Estimación & Rechazo & P-valor \\ \hline
+        $\beta_0$ & $73.61$ & - & - \\ \hline
+        $\beta_1$ & $-0.45$ & No & $0.701$ \\ \hline
+        $\beta_2$ & $1.30$ &  No & $ 0.258$ \\ \hline
+        $\beta_3$ & $0.56$ & No & $0.609$ \\ \hline
+        $\beta_4$ & $-0.17$ & No & $0.875$ \\ \hline
+        $\beta_5$ & $-0.39$ & No & $0.806$ \\ \hline
+    \end{tabular}
+\end{center}
+
+Podemos ver aquí que ninguno es significativamente distinto de cero, pues los p-valores del test dieron muy alto. Esto quiere decir, que no tenemos pruebas suficientes y por lo tanto no podemos rechazar la hipótesis nula.
+
+\vskip0.2cm\textbf{Significancia de la regresión}\\
+Tenemos pruebas suficientes para decir que la regresión utilizada (aquella que utiliza todas las x) es mucho mejor que utilizar sólo la media de la variable objetivo.\\
+Esta información la brinda el p-valor del test F, cuyo valor es $p-valor = 2.48 \times 10^{-7}$.
+Luego, otra medida que nos brinda información acerca de la significancia de la regresión es el $R^2_{adj} = 0.979$. Esto quiere decir que la regresión sirve para explicar la variabilidad de la variable objetivo adecuadamente.\\
+
+\vskip0.2cm\textbf{Observaciones}\\
+Nos llamó la atención que, por más que ninguno de los coeficientes tuvo la significancia suficiente para rechazar la hipótesis nula del test nulo, la significancia final de la regresión dio alta.\\
+Esto muy probablemente se deba a que muchas de las variables están altamente correlacionadas; y por lo tanto la varianza para cada uno de los parámetros es muy alta provocando que los intervalos de confianza para los mismos sea muy grande y posiblemente incluya al cero dentro de este.
+\vskip0.2cm
+Esto nos invita a revisar el modelo propuesto en búsqueda de una selección más adecuada de las variables predictoras.
+
+\vskip0.2cm\textbf{Modelo}\\
+\begin{equation}\tag{M1}
+    Y = 73.61 -0.45 X_{1} + 1.30 X_{2} + 0.56 X_{3} -0.17 X_{4} -0.39 X_{5}
+\end{equation}

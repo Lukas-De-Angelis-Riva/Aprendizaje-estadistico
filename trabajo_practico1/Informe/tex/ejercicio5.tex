@@ -1,0 +1,33 @@
+Decidimos para este apartado utilizar el método stepwise forwarding, y obtuvimos los siguientes resultados:
+
+\begin{minipage}{\linewidth}
+    \begin{minipage}{0.45\linewidth}
+        \begin{center}
+            \begin{tabular}{|c|c|c|c|c|}
+                \hline
+                 $X_1$ & $X_2$ & $X_3$ & $X_4$ & $X_5$ \\ \hline
+                        &       &   Si  &       &      \\ \hline
+                        &   Si  &   Si  &       &      \\ \hline
+                  Si   &   Si  &   Si  &       &       \\ \hline
+                  Si   &   Si  &   Si  &       & Si    \\ \hline
+                  Si   & Si    &   Si  &  Si   & Si    \\ \hline
+            \end{tabular}
+        \end{center}
+    \end{minipage}
+    \hspace{0.05\linewidth}
+    \begin{minipage}{0.45\linewidth}
+        \begin{figure}[H]
+            \includegraphics[width=1\textwidth]{resources/Forward.png}
+        \end{figure}
+    \end{minipage}
+\end{minipage}
+
+Del gráfico de la derecha, podemos ver que para el modelo con 4 variables se obtiene el índice de CP que mejor ajusta en la recta identidad.\\
+Además, podemos observar que, para ese mismo modelo, el coeficiente de $R^2_{adj}$ es cercano a 1.\\
+Por lo que finalmente nos quedaríamos con el modelo de 4 variables, siendo la regresión lineal la siguiente:
+\begin{equation}\tag{M3}
+    Y = 56.43 - 0.27 \cdot X_1 + 1.47 \cdot X_2 + 0.73 \cdot X_3 - 0.22 \cdot X_5
+\end{equation}
+
+
+

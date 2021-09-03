@@ -1,0 +1,55 @@
+\documentclass{estilo}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}        % para los vectores columnas
+\usepackage{amsfonts}       % para las negrita de pizarra
+\usepackage{amssymb}        % para simbolos matematicos
+\usepackage{hyperref}       % para utilizar referencias
+\usepackage{multirow}       % para las tablas
+
+\usepackage[style=authoryear-comp]{biblatex}
+
+\begin{document}
+\maketitle
+
+\section*{Enunciado}
+Consideremos los datos iris. Es un conjunto de datos analizados por Fisher que consisten en 4 mediciones realizadas en 50 flores iris de cada una de 3 especies distintas (Setosa, Versicolor y Virginica). Las 4 variables, medidas en centímetros, son:
+\begin{itemize}
+    \item X1 = Longitud de los sépalos (sepal length)
+    \item X2 = Ancho de los sépalos (sepal width)
+    \item X3 = Longitud de los pétalos (petal length)
+    \item X4 = Ancho de los pétalos (petal width)
+\end{itemize}
+
+\begin{enumerate} 
+\item[\hyperlink{ej1}{1.}]Utilizando las funciones del paquete MASS de R:
+\begin{itemize}
+    \item a) Suponiendo normalidad en los datos, hacer una clasificación lineal y calcular el error de clasificación por los 2 métodos:
+    \begin{itemize}
+        \item 1. Calcular la proporción de datos mal clasificados (o error aparente).
+        \item 2. Validación cruzada.
+    \end{itemize}
+    \item b) Ídem a) pero con la clasificación cuadrática y comparar los resultados. 
+\end{itemize}
+
+\item[\hyperlink{ej2}{2.}]Usando lo aprendido en teoría
+    \begin{enumerate}
+        \item  Graficar los pares de datos $(X2,X4)$ en el plano. Para cada especie, estos datos ¿tienen aspecto de provenir de una distribución normal bivariada?
+        
+        \item  Suponiendo que la distribución es normal bivariada para cada población, construir la regla de clasificación cuadrática, asumiendo probabilidad a priori de pertenecer a cada grupo iguales. Usando esta regla de clasificación recién construida clasificar la nueva observación $x_0 = (3.5 ; 1.75)$ como perteneciente a alguno de los 3 grupos.
+        
+        \item  Supongamos que las matrices de covarianza $\Sigma_i$ son las mismas para las 3 poblaciones normales bivariadas. Construir la regla de clasificación lineal, asumiendo probabilidad a priori de pertenecer a cada grupo iguales, y usarla para clasificar la nueva observación $x_0 = (3.5 ; 1.75)$ como perteneciente a alguno de los 3 grupos. Comparar los resultados obtenidos en los ítems anteriores.
+        \item  Graficar en el scatterplot realizado en a) las regiones halladas en c).
+        \item  Usando la clasificación lineal realizada en c), clasificar las observaciones de la muestra. Calcular la proporción de datos mal clasificados y la estimación insesgada del error que se obtiene por validación cruzada.
+    \end{enumerate}
+\end{enumerate}
+
+\newpage
+
+\hypertarget{ej1}{\subsection*{Ejercicio 1}}
+\input{tex/ejercicio1}
+\hypertarget{ej2}{\subsection*{Ejercicio 2}}
+\input{tex/ejercicio2}
+
+\end{document}

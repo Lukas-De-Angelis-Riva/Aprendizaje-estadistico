@@ -1,0 +1,21 @@
+El nuevo ajuste lineal y los respectivos tests nulos, eliminando el coeficiente intercept nos dan los siguientes resultados:
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Coeficiente & Estimación & Rechazo & P-valor \\ \hline
+        $\beta_1$ & $0.33$ & No & $0.0883$ \\ \hline
+        $\beta_2$ & $2.03$ &  Sí & $ 4.14 \times 10^{-6}$ \\ \hline
+        $\beta_3$ & $1.30$ & Sí  & $4.52 \times 10^{-9}$ \\ \hline
+        $\beta_4$ & $0.56$ & Sí & $1.53 \times 10^{-6}$ \\ \hline
+        $\beta_5$ & $0.35$ & No & $0.7446$ \\ \hline
+    \end{tabular}
+\end{center}
+Por lo que, de estos resultados nos llevamos que, a diferencia del modelo lineal planteado anteriormente, los coeficientes significativamente distintos de 0, en este caso son $\beta_2, \beta_3, \beta_4$ mientras que para los coeficientes $\beta_1$ y $\beta_5$ no tenemos evidencia suficiente para rechazar la hipótesis nula, y por lo tanto no podemos afirmar que sean distintos de 0.\\
+Y, para la significancia de la regresión, obtuvimos los siguientes resultados:\\
+Nuevamente, tenemos evidencia suficiente para decir que el modelo que utiliza todas las variables x, quitando el intercept es mejor que sólo utilizar la media, pues el p-valor del test F nos dio como resultado $p-valor = 9.691 \times 10^{-15}$.\\
+Además como medida de significancia del modelo, obtuvimos el valor de $R^{2}_{adj} = 0.980$ que es muy cercano a 1, y por lo tanto sirve para explicar la variabilidad de la variable objetivo.
+
+\vskip0.2cm\textbf{Modelo}\\
+\begin{equation}\tag{M2}
+    Y = 0.33 X_{1} + 2.03 X_{2} + 1.30 X_{3} + 0.56 X_{4} + 0.35 X_{5}
+\end{equation}

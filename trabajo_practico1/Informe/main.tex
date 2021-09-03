@@ -1,0 +1,47 @@
+\documentclass{estilo}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}        % para los vectores columnas
+\usepackage{amsfonts}       % para las negrita de pizarra
+\usepackage{amssymb}        % para simbolos matematicos
+\usepackage{hyperref}       % para utilizar referencias
+
+\usepackage[style=authoryear-comp]{biblatex}
+
+\begin{document}
+\maketitle
+
+\section*{Enunciado}
+Los datos del archivo \textit{cemento.txt} fueron tomados en un estudio experimental para relacionar el calor generado (Y) al fraguar 14 muestras de cemento con distinta composición. Las variables explicativas son los pesos (medidos en porcentajes del peso de cada muestra de cemento) de 5 componentes del cemento.
+
+\begin{enumerate}
+    \item[\hyperlink{ej1}{1.}] Calcular la matriz de correlación de todas las variables comprendidas en el problema, incluyendo a la variable Y. Inspeccionando esta matriz determinar cuáles parecen ser las variables que pueden contribuir significativamente a explicar la variación de Y.
+    \item[\hyperlink{ej2}{2.}] Usar Y como variable dependiente y todas las covariables y una intercept para realizar un ajuste lineal. Calcular el estimador de mínimos cuadrados de los parámetros y para cada uno de ellos testear la hipótesis de que es 0. ¿Cuáles son significativamente distintos de 0? ¿es la regresión significativa? ¿Observa alguna contradicción con el resultado obtenido en los tests individuales anteriores? ¿Vale la pena hacer un nuevo intento para seleccionar qué variables entran en la regresión?
+    \item[\hyperlink{ej3}{3.}] Calcular la suma de las 5 covariables. ¿Qué observa? ¿Cómo se justifica este parecido entre los totales? A partir de este resultado, ¿Puede justificar esto que eliminemos del modelo la intercept?
+    \item[\hyperlink{ej4}{4.}] Realizar un nuevo ajuste lineal usando las 5 variables independientes y eliminando la intercept. ¿Cómo se comparan estos resultados con los obtenidos anteriormente? ¿Cuáles son significativamente distintos de 0?
+    \item[\hyperlink{ej5}{5.}] Plantear un nuevo modelo en el que intervengan aquellas variables que contribuyen significativamente y estimar los parámetros por mínimos cuadrados. ¿Qué modelo elegiría finalmente?
+    \item[\hyperlink{ej6}{6.}] A partir de la estimación del error cuadrático medio, determinar si de todos los modelos planteados en el ejercicio, el seleccionado en el ítem anterior parece ser el mejor.
+\end{enumerate}
+\newpage
+
+\section*{Marco teórico}
+\input{tex/marco_teorico}
+\newpage
+\section*{Resolución}
+\hypertarget{ej1}{\subsection*{Ejercicio 1}}
+\input{tex/ejercicio1}
+\hypertarget{ej2}{\subsection*{Ejercicio 2}}
+\input{tex/ejercicio2}
+\hypertarget{ej3}{\subsection*{Ejercicio 3}}
+\input{tex/ejercicio3}
+\hypertarget{ej4}{\subsection*{Ejercicio 4}}
+\input{tex/ejercicio4}
+\hypertarget{ej5}{\subsection*{Ejercicio 5}}
+\input{tex/ejercicio5}
+\hypertarget{ej6}{\subsection*{Ejercicio 6}}
+\input{tex/ejercicio6}
+\newpage
+\subsection*{Extra}\label{extra}
+\input{tex/extra}
+\end{document}

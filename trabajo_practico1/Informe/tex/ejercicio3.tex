@@ -1,0 +1,92 @@
+
+A continuación calcularemos la suma de las variables predictoras.
+\vskip0.1cm
+\begin{minipage}{\linewidth}
+  \hspace{0.10\linewidth}
+      \begin{minipage}{0.20\linewidth}
+        \begin{tabular}{| c | c |}
+            \hline
+            Muestra & Suma \\ \hline
+            1 & 101.5 \\ \hline
+            2 & 99.3 \\ \hline
+            3 & 100.0 \\ \hline 
+            4 & 99.4 \\ \hline
+            5 & 100.4 \\ \hline
+            6 & 99.4 \\ \hline
+            7 & 99.1 \\ \hline
+            8 & 100.2 \\ \hline
+            9 & 98.3 \\ \hline
+            10 & 100.5 \\ \hline
+            11 & 100.2 \\ \hline
+            12 & 100.6 \\ \hline
+            13 & 100.4 \\ \hline
+            14 & 99.1 \\ \hline
+        \end{tabular}
+    \end{minipage}
+  \hspace{0.05\linewidth}
+  \begin{minipage}{0.50\linewidth}
+    \justify
+    Como es esperado, siendo que cada una de las variables explicativas representan un porcentaje sobre el peso de cada muestra de cemento, las sumas se acercan mucho a 100.\\
+    Esto nos indica que las columnas de la matriz de diseño pueden traer consigo un problema: las columnas tienden a ser linealmente dependientes, pues, con algún error asociado, se cumple que $X_1 + X_2 + X_3 + X_4 + X_5 = 100$.\\
+        \begin{center}
+            \begin{tabular}{| c | c | c | c |}
+                \hline
+                Min & Max & Mean & Std. Error \\ \hline
+                98.30 & 101.50 & 99.89 & 0.82 \\ \hline
+            \end{tabular}       
+        \end{center}
+  \end{minipage}
+\end{minipage}
+\vskip0.2cm
+Por lo tanto, respecto a la pregunta de si tiene sentido eliminar el intercept de la regresión:\\
+Teóricamente el hecho de que las columnas de la matriz de diseño sean linealmente dependientes nos indica que el modelo tendrá el mismo error cuadrático medio si reducimos en uno la cantidad de parámetros. Sin pérdida de generalidad, mostramos esta afirmación a continuación quitando el coeficiente $\beta_5$:
+
+Sea nuestro modelo 
+$$
+Y = \beta_{0} + \beta_{1} \cdot X_{1} + \beta_{2} \cdot X_{2} + \beta_{3} \cdot X_{3} + \beta_{4} \cdot X_{4}+ \beta_{5} \cdot X_{5} + \epsilon
+$$
+y suponemos 
+$$X_1 + X_2 + X_3 + X_4 + X_5 = 100$$ 
+Y, además que no existe otra relación lineal entre las variables predictoras.\\
+Por lo tanto, 
+$$
+Y = \beta_{0} + \beta_{1} \cdot X_{1} + \beta_{2} \cdot X_{2} + \beta_{3} \cdot X_{3} + \beta_{4} \cdot X_{4}+ \beta_{5} \cdot (100 - (X_1 + X_2 + X_3 + X_4)) + \epsilon
+$$
+
+Agrupando, y definiendo:
+
+$$
+b_{0} = \beta_{0} + \beta_{5} \cdot 100
+$$
+$$
+b_{1} = \beta_{1} - \beta_{5}
+$$
+$$
+b_{2} = \beta_{2} - \beta_{5}
+$$
+$$
+b_{3} = \beta_{3} - \beta_{5}
+$$
+$$
+b_{4} = \beta_{4} - \beta_{5}
+$$
+
+se tiene el modelo 
+$$
+Y = b_{0} + b_{1} \cdot X_{1} + b_{2} \cdot X_{2} + b_{3} \cdot X_{3} + b_{4} \cdot X_{4} + \epsilon
+$$
+
+el cual depende de solo 5 parámetros, que será equivalente a cualquier modelo regresado con los 6 parámetros pero con la peculiaridad de que esta proyección será única, a diferencia de la anterior que tendrá infinitas soluciones ya que el espacio generado por las columnas de $\mathbb X$ será el mismo.
+
+De manera equivalente se podría haber propuesto el siguiente desarrollo sobre el coeficiente que acompaña al Intercept:
+$$
+\beta_{0} = \beta_{0} \cdot \frac{X_1 + X_2 + X_3 + X_4 + X_5}{100}
+$$
+Desarrollando queda un modelo de 5 parámetros, dependiente de 5 variables y sin intercept.
+\vskip0.2cm
+
+El presente desarrollo nos indica que eliminar cualquiera de las columnas no tendrá efecto en el error cuadrático medio, pues el modelo generado será equivalente.
+
+Por lo tanto, en nuestro caso de estudio donde la suma de las covariables es aproximadamente 100 (oscila en torno a este valor), podemos afirmar que para nuestra regresión eliminar el intercept (como también eliminar cualquiera otra covariable) no generará un aumento abrupto del error cuadrático medio.\\
+Sin embargo, el hecho de que las columnas sean casi linealmente dependientes no justifica la eliminación del intercept. Dado que, siempre que sea factible, se busca reducir la complejidad del modelo: creemos que lo mejor sería eliminar una variable y no el intercept, ya que el intercept no supone un costo adicional al modelo.\\
+Bajo la única circunstancia en la que podríamos considerar eliminar el intercept es bajo un modelo de regresión en el cual conocemos teóricamente que el valor del mismo es nulo y además que el punto (0,0) no sea una extrapolación (es decir, no forzar al modelo a pasar por el origen cuando los puntos utilizados para regresar no están cerca del mismo)

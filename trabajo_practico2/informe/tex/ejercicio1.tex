@@ -1,0 +1,34 @@
+\subsubsection*{Ítem a}
+A continuación se mostrará una matriz de confusión para la clasificación mediante LDA.
+\begin{center}
+    \begin{tabular}{|c|l|l|l|l|}
+    \hline
+    \multicolumn{2}{|l|}{\multirow{2}{*}{}}       & \multicolumn{3}{c|}{Clase predicha}            \\ \cline{3-5} 
+    \multicolumn{2}{|l|}{}                        & Iris-setosa & Iris-versicolor & Iris-virginica \\ \hline
+    \multirow{3}{*}{Clase real} & Iris-setosa     & 50          & 0               & 0              \\ \cline{2-5} 
+                                & Iris-versicolor & 0           & 48              & 2              \\ \cline{2-5} 
+                                & Iris-virginica  & 0           & 1               & 49             \\ \hline
+    \end{tabular}
+\end{center}
+
+Tal como se observa en la presente tabla, el 98\% de los datos fueron predichos correctamente. Es decir, el error aparente es de $0.02$. 
+
+Con validación cruzada (utilizamos leave one out) dio el mismo resultado.\\
+
+\subsubsection*{Ítem b}
+La matriz de confusión es idéntica a la obtenida en el ítem a, y por ende también el error aparente. Sin embargo, al realizar validación cruzada obtuvimos el siguiente resultado:
+
+\begin{center}
+    \begin{tabular}{|c|l|l|l|l|}
+    \hline
+    \multicolumn{2}{|l|}{\multirow{2}{*}{}}       & \multicolumn{3}{c|}{Clase predicha}            \\ \cline{3-5} 
+    \multicolumn{2}{|l|}{}                        & Iris-setosa & Iris-versicolor & Iris-virginica \\ \hline
+    \multirow{3}{*}{Clase real} & Iris-setosa     & 50          & 0               & 0              \\ \cline{2-5} 
+                                & Iris-versicolor & 0           & 47              & 3             \\ \cline{2-5} 
+                                & Iris-virginica  & 0           & 1               & 49             \\ \hline
+    \end{tabular}
+\end{center}
+
+Siendo entonces el error por validación cruzada de $0.0267$.
+
+
